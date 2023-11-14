@@ -1,0 +1,208 @@
+{
+	"datas": [
+		{	
+			"nom": "Brest",
+			"insee": "29019",
+			"top": "211px",
+			"left": "70px"
+		},
+		{	
+			"nom": "Rennes",
+			"insee": "35238",
+			"top": "249px",
+			"left": "206px"
+		},
+		{	
+			"nom": "Cherbourg-Octeville",
+			"insee": "50129",
+			"top": "137px",
+			"left": "222px"
+		},
+	    {	
+			"nom": "Rouen",
+			"insee": "76540",
+			"top": "185px",
+			"left": "312px"
+		},
+		{	
+			"nom": "Alençon",
+			"insee": "61001",
+			"top": "236px",
+			"left": "295px"
+		},
+		{	
+			"nom": "Amiens",
+			"insee": "80021",
+			"top": "153px",
+			"left": "392px"
+		},
+		{	
+			"nom": "Lille",
+			"insee": "59350",
+			"top": "84px",
+			"left": "444px"
+		},
+		{	
+			"nom": "Nantes",
+			"insee": "44109",
+			"top": "309px",
+			"left": "200px"
+		},
+		{	
+			"nom": "Tours",
+			"insee": "37261",
+			"top": "298px",
+			"left": "294px"
+		},
+		{	
+			"nom": "Paris",
+			"insee": "75056",
+			"top": "219px",
+			"left": "395px"
+		},
+		{	
+			"nom": "Reims",
+			"insee": "51454",
+			"top": "180px",
+			"left": "467px"
+		},
+		{	
+			"nom": "Metz",
+			"insee": "57463",
+			"top": "204px",
+			"left": "588px"
+		},
+		{	
+			"nom": "Strasbourg",
+			"insee": "67482",
+			"top": "243px",
+			"left": "665px"
+		},
+		{	
+			"nom": "La Rochelle",
+			"insee": "17300",
+			"top": "401px",
+			"left": "220px"
+		},
+		{	
+			"nom": "Bourges",
+			"insee": "18033",
+			"top": "339px",
+			"left": "413px"
+		},
+		{	
+			"nom": "Auxerre",
+			"insee": "89024",
+			"top": "299px",
+			"left": "439px"
+		},
+		{	
+			"nom": "Chaumont",
+			"insee": "89093",
+			"top": "273px",
+			"left": "533px"
+		},
+		{	
+			"nom": "Belfort",
+			"insee": "90010",
+			"top": "310px",
+			"left": "617px"
+		},
+		{	
+			"nom": "Chalon-sur-Saône",
+			"insee": "71076",
+			"top": "369px",
+			"left": "524px"
+		},
+		{	
+			"nom": "Bordeaux",
+			"insee": "33063",
+			"top": "508px",
+			"left": "214px"
+		},
+		{	
+			"nom": "Limoges",
+			"insee": "87085",
+			"top": "410px",
+			"left": "330px"
+		},
+		{	
+			"nom": "Vichy",
+			"insee": "03310",
+			"top": "424px",
+			"left": "429px"
+		},
+		{	
+			"nom": "Lyon",
+			"insee": "69123",
+			"top": "435px",
+			"left": "511px"
+		},
+		{	
+			"nom": "Bourg-Saint-Maurice",
+			"insee": "73054",
+			"top": "457px",
+			"left": "616px"
+		},
+		{	
+			"nom": "Aurillac",
+			"insee": "15014",
+			"top": "500px",
+			"left": "391px"
+		},
+		{	
+			"nom": "Montélimar",
+			"insee": "26198",
+			"top": "535px",
+			"left": "504px"
+		},
+		{	
+			"nom": "Gap",
+			"insee": "05061",
+			"top": "540px",
+			"left": "586px"
+		},
+		{	
+			"nom": "Biarritz",
+			"insee": "64122",
+			"top": "589px",
+			"left": "170px"
+		},
+		{	
+			"nom": "Tarbes",
+			"insee": "65440",
+			"top": "621px",
+			"left": "255px"
+		},
+		{	
+			"nom": "Toulouse",
+			"insee": "31555",
+			"top": "610px",
+			"left": "339px"
+		},
+		{	
+			"nom": "Perpignan",
+			"insee": "66136",
+			"top": "649px",
+			"left": "401px"
+		},
+		{	
+			"nom": "Marseille",
+			"insee": "13055",
+			"top": "621px",
+			"left": "536px"
+		},
+		{	
+			"nom": "Nice",
+			"insee": "06088",
+			"top": "592px",
+			"left": "643px"
+		},
+		{	
+			"nom": "Ajaccio",
+			"insee": "2A004",
+			"top": "717px",
+			"left": "645px"
+		}
+	]
+}
