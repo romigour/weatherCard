@@ -164,8 +164,16 @@ function getImgWeather(indexWeather) {
 function createSvg() {
     htmlToImage.toSvg(document.getElementById('card'))
         .then(function (dataUrl) {
-            let svg = decodeURIComponent(dataUrl.split(',')[1])
-            console.log(svg);
-            document.getElementById('svg').innerHTML = svg
+            let svg = decodeURIComponent(dataUrl.split(',')[1]);
+            download(svg, "meteo5.svg", "image/svg+xml");
         });
+}
+
+function download(content, filename, contentType) {
+    if(!contentType) contentType = 'application/octet-stream';
+    var a = document.createElement('a');
+    var blob = new Blob([content], {'type':contentType});
+    a.href = window.URL.createObjectURL(blob);
+    a.download = filename;
+    a.click();
 }
