@@ -109,7 +109,7 @@ function loadCard(response) {
 
     for (const dataCity of response.datas) {
 
-        //fetch("https://api.meteo-concept.com/api/forecast/daily?token=3d9681282fcc327f4d3a638bf05545435e6b5cfeeb7da4bb8a7dba4cee9e8d4f&insee=" + dataCity.insee)
+        // fetch("https://api.meteo-concept.com/api/forecast/daily?token=3d9681282fcc327f4d3a638bf05545435e6b5cfeeb7da4bb8a7dba4cee9e8d4f&insee=" + dataCity.insee)
         fetch("./brest.json")
             .then((res) => {
                 return res.json();
@@ -124,25 +124,33 @@ function addWeatherCity(weartherVille, dataCity) {
 
     if (!dataCity.top) return;
 
-    // Creation d'une div de ville
-    var ville = document.createElement('div');
-    ville.id = dataCity.nom;
-    ville.style.position = "absolute";
-    ville.style.display = "flex";
-    ville.style.flexDirection = "column";
-    ville.style.alignItems = "center";
-    ville.style.top = dataCity.top;
-    ville.style.left = dataCity.left;
-    const imgWeather = getImgWeather(weartherVille.forecast[0].weather);
-    let weatherContent = "<div style=\"display: flex; flex-direction: column; align-items: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)\">" +
-        "<img src=\"assets/img/" + imgWeather + "\" />" +
-        "<span style=\"margin-top: -15px; font-weight: bold\">" +
-            "<span style=\"color: blue\">" + weartherVille.forecast[0].tmin + "</span> / " +
-            "<span style=\"color: #e01313\">" + weartherVille.forecast[0].tmax + "</span></span>" +
-        "<!--<span style=\"margin-top: -5px; font-weight: bold\">" + dataCity.nom + "</span>--></div>";
-    ville.innerHTML = weatherContent;
+    for (let i = 0; i < 3; i++) {
+        // Creation d'une div de ville
+        var ville = document.createElement('div');
+        ville.id = dataCity.nom;
+        ville.style.position = "absolute";
+        ville.style.display = "flex";
+        ville.style.flexDirection = "column";
+        ville.style.alignItems = "center";
+        ville.style.top = (Number(dataCity.top.replace('px', '')) + (i * 756.8)) + 'px';
+        ville.style.left = dataCity.left;
+        const imgWeather = getImgWeather(weartherVille.forecast[i].weather);
+        let weatherContent = "<div style=\"display: flex; flex-direction: column; align-items: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)\">" +
+            "<img src=\"assets/img/" + imgWeather + "\" />" +
+            "<span style=\"margin-top: -15px; font-weight: bold\">" +
+            "<span style=\"color: blue\">" + weartherVille.forecast[i].tmin + "</span> / " +
+            "<span style=\"color: #e01313\">" + weartherVille.forecast[i].tmax + "</span></span>" +
+            "<!--<span style=\"margin-top: -5px; font-weight: bold\">" + dataCity.nom + "</span>--></div>";
+        ville.innerHTML = weatherContent;
 
-    $('[id=card]').append(ville);
+        if (i === 0) {
+            $('[id=card1]').append(ville);
+        } else if (i === 1) {
+            $('[id=card2]').append(ville);
+        } else {
+            $('[id=card3]').append(ville);
+        }
+    }
 }
 
 function getImgWeather(indexWeather) {
@@ -162,10 +170,20 @@ function getImgWeather(indexWeather) {
 }
 
 function createSvg() {
-    htmlToImage.toSvg(document.getElementById('card'))
+    htmlToImage.toSvg(document.getElementById('card1'))
         .then(function (dataUrl) {
             let svg = decodeURIComponent(dataUrl.split(',')[1]);
-            download(svg, "meteo5.svg", "image/svg+xml");
+            download(svg, "today.svg", "image/svg+xml");
+        });
+    htmlToImage.toSvg(document.getElementById('card2'))
+        .then(function (dataUrl) {
+            let svg = decodeURIComponent(dataUrl.split(',')[1]);
+            download(svg, "tomorrow.svg", "image/svg+xml");
+        });
+    htmlToImage.toSvg(document.getElementById('card3'))
+        .then(function (dataUrl) {
+            let svg = decodeURIComponent(dataUrl.split(',')[1]);
+            download(svg, "after_tomorrow.svg", "image/svg+xml");
         });
 }
 
